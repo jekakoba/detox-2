@@ -1,0 +1,70 @@
+//====================================================================================================
+
+//====================================================================================================
+.footer {
+	background-color: var(--pure-white);
+	order: 8;
+	// .footer__container
+
+	&__container {
+	}
+
+	// .footer__main
+
+	&__main {
+		display: flex;
+		@media (min-width: $mobileSmall) {
+			padding: toRem(50) 0;
+			justify-content: end;
+			border-bottom: toRem(1) solid var(--elephant);
+		}
+		@media (max-width: $mobileSmall) {
+			justify-content: center;
+		}
+	}
+
+	// .footer__menu
+
+	&__menu {
+	}
+
+	// .footer__bottom
+
+	&__bottom {
+		padding-top: toRem(16);
+		padding-bottom: toRem(30);
+		line-height: 1.2;
+		font-size: toRem(14);
+		color: var(--cement);
+		display: grid;
+		gap: toRem(10);
+		align-items: center;
+		@media (min-width: $mobileSmall) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $mobileSmall) {
+			text-align: center;
+			justify-content: center;
+			padding-bottom: toRem(17);
+			padding-top: toRem(5);
+		}
+		ul {
+			justify-content: end;
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: toRem(10) toRem(25);
+			@media (max-width: $mobileSmall) {
+				display: none;
+			}
+		}
+	}
+
+	// .footer__copyright
+
+	&__copyright {
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(12);
+		}
+	}
+}
